@@ -23,6 +23,7 @@ def main():
 
     #  Print imports for main.cr
     with open("main.cr", "w") as main:
+        main.write(f'IMPORT "config.cr"\n')
         for f in all_files:
             filename, file_extension = os.path.splitext(f)
             if file_extension == ".cr" and filename != "main":
